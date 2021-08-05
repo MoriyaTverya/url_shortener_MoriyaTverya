@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} MiniLink Statistics {% endblock %}</h1>
+    <table class="table">
+        <thead>
+            <tr>
+            <th scope="col">Short url</th>
+            <th scope="col">Original url</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for url in urls %}
+                <tr>
+                    <td> <a href="{{url['short_url']}}">{{ url['short_url'] }}</a></td>
+                    <td><a href="{{url['long_url']}}">{{ url['long_url'] }}</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
