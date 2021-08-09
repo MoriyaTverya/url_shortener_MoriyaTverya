@@ -6,7 +6,7 @@ import string
 client = MongoClient("mongodb+srv://MORIYA:25112001@url-db.xdr7i.mongodb.net/URL-DB?retryWrites=true&w=majority")
 db = client.ShortUrls
 
-#requried fonctions:  generate short url, get short url, get long url, check if longqshort url exists, get url 
+# requried fonctions:  generate short url, get short url, get long url, check if longqshort url exists, get url 
 def get_long_url(short_url):
     return db.urls.find_one({ 'short_url': short_url}, {"long_url": 1, '_id': 0})["long_url"]
 
