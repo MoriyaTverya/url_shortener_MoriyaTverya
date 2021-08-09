@@ -7,7 +7,7 @@ from urlDB import *
 
 
 app = Flask(__name__)
-#app.config['SECRET_KEY'] = 'moriya'
+app.config['SECRET_KEY'] = 'moriya'
 
 #get url input from user, validate it and give suit response
 @app.route('/', methods=('GET', 'POST'))
